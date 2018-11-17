@@ -1,0 +1,15 @@
+.all{
+    width: 1250px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    
+}
+
+
+#formLogin{
+    width: 400px;
+    position: relative;
+    left: 430px;
+    
+}

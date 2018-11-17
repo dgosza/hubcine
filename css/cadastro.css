@@ -1,0 +1,67 @@
+.all{
+    width: 750px;
+    height: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+       
+}
+
+
+.formCadastro{
+    width: 100%;
+    height: 120px;
+}
+.logo{
+    height: 140px;
+    width: 100%;
+
+}
+
+.pessoal{
+    width: 100%;
+    
+}
+
+.left{
+    width: 450px;
+}
+
+
+
+#cidades{
+    display:none;
+}
+
+#teste{
+    width:1000px;
+
+    position: relative;
+    left: -280px;
+}
+
+#um{
+    width: 300px;
+   
+}
+
+#dois{
+    width: 300px;
+    
+}
+
+#tres{
+    width: 300px;
+   
+}
+
+#teste2{
+    
+}
+
+#validaCheck{
+    width: 100%;
+
+    position: relative;
+    left: -340px;
+    top: 40px;
+}
