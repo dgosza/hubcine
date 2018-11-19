@@ -1,15 +1,15 @@
 
 <?php    
- session_start();  
+session_start();  
 
- if(isset($_SESSION["email"]) && isset($_SESSION["nome"]) && isset($_SESSION["sobrenome"]) && isset($_SESSION["genero"]) && isset($_SESSION["admin"]))  
- {  
- }  
- else  
- {  
-      header("location:index.php");  
- }  
- ?>  
+if(isset($_SESSION["email"]) && isset($_SESSION["nome"]) && isset($_SESSION["sobrenome"]) && isset($_SESSION["genero"]) && isset($_SESSION["admin"]))  
+{  
+}  
+else  
+{  
+    header("location:index.php");  
+}  
+?>  
 
 <!DOCTYPE html>
 <html>
@@ -62,6 +62,15 @@
             </div>
 
             <div id="meio">
+
+                <h4>O que você deseja fazer, <?php echo $_SESSION['nome']; ?>?</h4><br>
+
+                <a href="painel_adm_addfilmes.php">    <button type="button" class="btn btn-outline-info">Adicionar Filmes</button>  </a>
+                <a href="painel_adm_alterfilmes.php">  <button type="button" class="btn btn-outline-info">Alterar Filmes</button>    </a>
+                <a href="painel_adm_deletefilmes.php"> <button type="button" class="btn btn-outline-danger">Excluir Filmes</button>  </a>
+
+                <br><br>
+
                 
             </div>
 
