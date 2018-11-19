@@ -7,6 +7,6 @@ define('PASS', '');
 define('DBNAME', 'hubcine');
 
 $conecta = new PDO('mysql:host=' . HOST . ';dbname=' . DBNAME . ';', USER, PASS);
-
+$conecta-> exec ('SET CHARACTER SET utf8');
 
 ?>
