@@ -28,6 +28,7 @@ session_start();
                 $_SESSION["genero"] = $dados->genero;
                 $_SESSION["sobrenome"] = $dados->sobrenome;
                 $_SESSION["idCadastro"] = $dados->idCadastro;
+                $_SESSION["admin"] = $dados->admin;
                 
                 header("location:cadastroRealizado.php");  
             }  
