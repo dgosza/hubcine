@@ -15,9 +15,10 @@
         $email = filter_input (INPUT_POST, 'email', FILTER_SANITIZE_STRING);
         $senha = filter_input (INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
         $plano = filter_input (INPUT_POST, 'tipoPlano', FILTER_SANITIZE_STRING);
+        $admin = "false";
 
         //insere no banco de dados
-        $envia = "INSERT INTO cadastro (nome, sobrenome, nasc, genero, estado, cidade, email, senha, plano) VALUES (:nome, :sobrenome, :datanasc, :genero, :estado, :cidade, :email, :senha, :tipoPlano)";
+        $envia = "INSERT INTO cadastro (nome, sobrenome, nasc, genero, estado, cidade, email, senha, plano, admin) VALUES (:nome, :sobrenome, :datanasc, :genero, :estado, :cidade, :email, :senha, :tipoPlano, :false)";
 
         $insere_bd = $conecta->prepare($envia);
         $insere_bd ->bindParam(':nome', $nome);
@@ -29,6 +30,7 @@
         $insere_bd ->bindParam(':email', $email);
         $insere_bd ->bindParam(':senha', $senha);
         $insere_bd ->bindParam(':tipoPlano', $plano);
+        $insere_bd ->bindParam(':false', $admin);
 
         if($insere_bd->execute()){
             header("Location: cadastroRealizado.php");
