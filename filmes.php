@@ -46,6 +46,15 @@
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="meuPerfil.php">Meu perfil</a>
+                        <?php
+                        
+                            $admin = $_SESSION['admin'];
+
+                            if($admin == 1){
+                                echo '<a class="dropdown-item" href="painel_adm.php">Painel Administrativo</a>';
+                            }
+                        
+                        ?>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="sair.php">Sair</a>
                     </div>
