@@ -66,8 +66,7 @@ else
                 <h4>O que você deseja fazer, <?php echo $_SESSION['nome']; ?>?</h4><br>
 
                 <a href="painel_adm_addfilmes.php">    <button type="button" class="btn btn-outline-info">Adicionar Filmes</button>  </a>
-                <a href="painel_adm_alterfilmes.php">  <button type="button" class="btn btn-outline-info">Alterar Filmes</button>    </a>
-                <a href="painel_adm_deletefilmes.php"> <button type="button" class="btn btn-outline-danger">Excluir Filmes</button>  </a>
+                <a href="painel_adm_alterfilmes.php">  <button type="button" class="btn btn-outline-info">Alterar Filmes ou Excluir</button>    </a>
 
                 <br><br>
 
