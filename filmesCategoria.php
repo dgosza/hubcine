@@ -91,7 +91,7 @@
                         
                         $conecta = new PDO("mysql:host=localhost;dbname=hubcine","root","");
                         $conecta -> exec ('SET CHARACTER SET utf8');
-                        $select = $conecta->prepare ("SELECT * FROM filmes ORDER BY genero");
+                        $select = $conecta->prepare ("SELECT * FROM filmes where mostrar = 1 ORDER BY genero");
                 
                         $select->execute();
                         $fetchAll = $select->fetchAll();
