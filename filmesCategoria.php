@@ -38,14 +38,6 @@
             <div class="topo">
                 <div id="logo"><img src="imgs/logo.png" width="250"></div>
 
-                <div class="pesquisarFilme">
-
-                    <form>
-                        <input type="text" class="form-control form-control-sm" maxlength="10" placeholder="Pesquisar filme...">
-                    </form>
-                        
-                </div>
-
                 <div class="nomeUser">
 
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#fff;color:#950000;border:#fff;">
