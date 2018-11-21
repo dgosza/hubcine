@@ -43,6 +43,7 @@ else
                     </button>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    
                         <a class="dropdown-item" href="meuPerfil.php">Meu perfil</a>
                         <?php
                         
@@ -55,6 +56,7 @@ else
                         ?>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="sair.php">Sair</a>
+
                     </div>
 
                 </div>
@@ -83,7 +85,7 @@ else
                         $conecta = new PDO("mysql:host=localhost;dbname=hubcine","root","");
                         $conecta -> exec ('SET CHARACTER SET utf8');
 
-                        $select = $conecta->prepare("SELECT * FROM filmes ORDER BY filme asc");
+                        $select = $conecta->prepare("SELECT * FROM filmes where mostrar = 1 ORDER BY filme asc");
                         $select->execute();
                         $fetchAll = $select->fetchAll();
                         foreach($fetchAll as $dados){
@@ -93,7 +95,10 @@ else
                             echo '<td scope "row">'.$dados['genero'].'</td>';
                             echo '<td scope "row">'.$dados['anoLancamento'].'</td>';
                             echo '<td scope "row">'.$dados['faixaEtaria'].' Anos</td>';
-                            echo '<td scope "row"> <a href="painel_adm_alteraDados.php?idFilme='.$dados['idFilme'].'" style="color:#000;"> <ion-icon name="create" src="imgs/edit.svg"> </ion-icon> </a></td>';
+                            echo '<td scope "row"> 
+                                    <a href="painel_adm_alteraDados.php?idFilme='.$dados['idFilme'].'" style="color:#000;"> <ion-icon name="create" src="imgs/edit.svg"> </ion-icon> </a>  
+                                    <a href="painel_adm_deletefilme.php?idFilme='.$dados['idFilme'].'" style="color:#000;"> <ion-icon name="close" src="imgs/delete.svg"></ion-icon> </a> 
+                                </td>';                            
                             echo '</tr>';
 
                         }  
