@@ -12,7 +12,7 @@ O site conta com algumas funcionalidades:
 -Cada usuário do site poderá alterar os seus dados ou excluir sua conta no site.
 -A alteração de dados somente poderá ser realizada nos atributos nome, sobrenome e email.
 
-#plus
+# plus
 -Quando o usuário for se cadastrar no site, irá escolher o seu sexo. Na pagina de boas vindas do site, irá aparecer o "bem vindo" de acordo com o seu sexo.
  Caso o usuário se cadastrar como sexo Masculino, "bem vindo". Caso feminino, "bem vinda". Caso indefinido, "bem vindx".
 
