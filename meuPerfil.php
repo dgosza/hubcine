@@ -72,8 +72,8 @@ session_start();
                     <p>
                         Seu Plano:
                         <?php 
-                            $conecta = new PDO("mysql:host=localhost;dbname=hubcine","root","");
-                            $conecta -> exec ('SET CHARACTER SET utf8');
+
+                            include_once 'conectaBanco.php';
 
                             $idUser = $_SESSION['idCadastro'];
                             $select = $conecta->prepare("SELECT b.nomePlano FROM cadastro as a INNER JOIN planos as b ON a.plano = b.plano where idCadastro = $idUser");

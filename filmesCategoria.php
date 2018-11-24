@@ -81,8 +81,8 @@
 
                         <?php
                         
-                        $conecta = new PDO("mysql:host=localhost;dbname=hubcine","root","");
-                        $conecta -> exec ('SET CHARACTER SET utf8');
+                        include_once 'conectaBanco.php';
+
                         $select = $conecta->prepare ("SELECT * FROM filmes where mostrar = 1 ORDER BY genero");
                 
                         $select->execute();

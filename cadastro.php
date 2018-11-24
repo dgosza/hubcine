@@ -21,10 +21,6 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <?php
-        $conecta = new PDO("mysql:host=localhost;dbname=hubcine","root","");
-        $conecta -> exec ('SET CHARACTER SET utf8');
-    ?>
 </head>
 <body>
 
@@ -104,6 +100,9 @@
                             <select name="estado" id="estados" class="form-control" required>
                                 <option value="-" selected disabled>Estado</option>
                                 <?php
+
+                                    include_once 'conectaBanco.php';
+
                                     $select = $conecta->prepare("SELECT * FROM estados ORDER BY nome ASC");
                                     $select->execute();
                                     $fetchAll = $select->fetchAll();

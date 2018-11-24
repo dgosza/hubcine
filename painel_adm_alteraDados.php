@@ -55,8 +55,8 @@ $id = filter_input(INPUT_GET, 'idCadastro', FILTER_SANITIZE_NUMBER_INT);
 
                 <?php 
 
-                    $conecta = new PDO("mysql:host=localhost;dbname=hubcine","root","");
-                    $conecta -> exec ('SET CHARACTER SET utf8');
+                    include_once 'conectaBanco.php';
+                    
                     $id = filter_input(INPUT_GET, 'idFilme', FILTER_VALIDATE_INT);
 
                     $select = $conecta->prepare("SELECT * FROM filmes where idFilme =".$id."");

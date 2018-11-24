@@ -54,8 +54,8 @@ else
                     <select class="form-control" name="genero" id="genero"> 
                         <option value="-" selected disabled>Gênero</option>
                         <?php 
-                            $conecta = new PDO("mysql:host=localhost;dbname=hubcine","root","");
-                            $conecta-> exec ('SET CHARACTER SET utf8');
+                            
+                            include_once 'conectaBanco.php';
 
 
                             $select = $conecta->prepare("SELECT * FROM filmegenero ORDER BY nomeGenero ASC");
