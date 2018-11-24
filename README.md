@@ -3,6 +3,7 @@
 Site fictício de filmes para o projeto de TGI da Universidade Drummond
 
 O site conta com algumas funcionalidades:
+
 -Painel administrativo para quem ter permissao no banco de dados.
  Para setar algum usuário como administrador do site, terá que setar um valor booleano (1) no atributo admin da tabela "cadastro" no banco de dados.  Caso o usuário não for admin do site, valor (0), o link para o painel administrativo não aparecerá.
 -Todo cadastro realizado no site irá setar o valor booleano (0) no cadastro do usuário.
